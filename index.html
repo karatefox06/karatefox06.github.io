@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To My Love</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --yellow: #ffe88a;
+      --green: #b8f5c1;
+      --blue: #b7d9ff;
+      --text-main: #2a2a2a;
+      --text-soft: #4a4a4a;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(
+        135deg,
+        var(--yellow) 0%,
+        var(--green) 50%,
+        var(--blue) 100%
+      );
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 32px 28px 28px;
+      box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--text-soft);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--yellow);
+    }
+
+    h1 {
+      margin-top: 16px;
+      font-size: 32px;
+      color: var(--text-main);
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .heart-line {
+      margin: 18px auto 0;
+      width: 72px;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--blue),
+        transparent
+      );
+      position: relative;
+    }
+
+    .heart-line::before {
+      content: "♥";
+      position: absolute;
+      left: 50%;
+      top: -11px;
+      transform: translateX(-50%);
+      font-size: 14px;
+      color: var(--green);
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: 18px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-main);
+    }
+
+    .highlight {
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .list {
+      margin-top: 10px;
+      list-style: none;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .list li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      color: var(--green);
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: 30px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from { opacity: .4 }
+      to { opacity: 1 }
+    }
+
+    .signature {
+      margin-top: 22px;
+      text-align: right;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .signature span {
+      display: block;
+      margin-top: 4px;
+      font-size: 16px;
+      color: var(--yellow);
+      font-weight: 600;
+    }
+
+    .footer-note {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-soft);
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 18px 20px;
+        border-radius: 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="tag">
+        <span class="tag-dot"></span>
+        <span>For you, from me</span>
+      </div>
+      <h1>To My Favorite Person</h1>
+      <p class="subtitle">
+        A bright little place made just for you.
+      </p>
+      <div class="heart-line"></div>
+    </header>
+
+    <section class="section">
+      <div class="section-title">What I want you to know</div>
+      <p>
+        I love you—<span class="highlight">in every shade of the world you love</span>.
+        You bring warmth like yellow, calm like blue, and life like green. Being with you
+        feels like stepping into sunlight, breathing fresh air, and finding peace all at once.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Why you mean so much to me</div>
+      <p>I fall for you in a hundred small ways:</p>
+      <ul class="list">
+        <li>Your smile feels like sunshine.</li>
+        <li>Your kindness makes everything softer.</li>
+        <li>Your energy makes ordinary days feel bright.</li>
+        <li>Your presence feels like home.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-title">My promise to you</div>
+      <p>
+        I promise to keep choosing you, to support you, to listen, and to love you in ways
+        that make you feel safe, appreciated, and adored. You deserve a life full of color,
+        and I want to be someone who adds to it.
+      </p>
+    </section>
+
+    <!-- ⭐ SLIDESHOW WITH YOUR EXACT FILENAMES ⭐ -->
+    <div class="slideshow-container">
+
+      <div class="slide fade"><img src="ChatGPT Image Aug 29, 2026, 05_36_58 PM.png"></div>
+      <div class="slide fade"><img src="20260330_203841080_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260417_055417697_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260423_023650553_iOS.png"></div>
+      <div class="slide fade"><img src="20260503_055036192_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260503_055101518_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260514_033449188_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260523_034255729_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260526_163833901_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260712_161343006_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260712_162408907_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260712_174427000_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260712_194410737_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260713_000615000_iOS.jpg"></div>
+      <div class="slide fade"><img src="20260713_041348000_iOS.jpg"></div>
+      <div class="slide fade"><img src="20261004_181301618_iOS.jpg"></div>
+
+    </div>
+
+    <div class="signature">
+      With all my love,
+      <span>Jacob Glasby</span>
+    </div>
+
+    <div class="footer-note">
+      (If you're reading this, I'm thinking about you.)
+    </div>
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+  </script>
+
+</body>
+</html>
